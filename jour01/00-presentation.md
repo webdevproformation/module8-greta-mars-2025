@@ -26,3 +26,9 @@ support : => https://formation.webdevpro.net/ci-cd
 => password : symfony7
 
 => pour ceux qui ont un PC portable => veillez l'amener Jeudi / Vendredi (installer tout ce qu'il faut pour vous sur votre machine !!)
+
+---------
+
+note de cours 
+
+<https://github.com/webdevproformation/module8-greta-mars-2025>
