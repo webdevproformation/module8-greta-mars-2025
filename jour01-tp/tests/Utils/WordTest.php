@@ -67,5 +67,25 @@ class WordTest extends TestCase{
         ];
     }
 
+    #[DataProvider("palyndromeProvider")]
+    public function test_palyndrome(string $text , bool $expected){
+
+        $word = new Word();
+        $resultat = $word->palyndrome($text);
+        $this->assertSame($resultat , $expected);
+
+    }
+
+    public static function palyndromeProvider(){
+        return [
+            ["kayak" , true],
+            ["laval" , true],
+            ["02/02/2020" , true],
+            ["hello" , false],
+            ["bonjour" , false],
+            ["coucou" , false]
+        ];
+    }
+
 }
                        

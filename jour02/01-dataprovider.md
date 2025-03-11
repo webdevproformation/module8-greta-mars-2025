@@ -20,3 +20,16 @@ cette fonction doit retourner :
 ... multiple de 3 et 5 en même temps par exemple 15 30 doivent retourner "fizzbuzz"
 
 Et créer le test avec le dataprovider associé 
+
+
+# cas pratique
+
+toujours dans la class WordTest vous avez une méthode qui permet de verifier la fonction qui s'appelle palyndrome
+
+cette fonction retourne true si le string qu'on lui donne est une palydrome
+c'est à dire un string qui a les même lettre dans les deux sens 
+
+kayak / laval / 02/02/2020 => true
+hello / bonjour / coucou => false 
+
+créer la méthode de test ET créer la méthode palyndrome !!! 
