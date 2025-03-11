@@ -42,5 +42,30 @@ class WordTest extends TestCase{
            "cas aaaa"        =>  [ "aaaa"    , ["a","a", "a", "a"]  ]
         ];
     }
+
+    #[DataProvider("fizzbuzzProvider")]
+    public function test_fizzbuzz(int $chiffre , int|string $expected ){
+        $word = new Word();
+        // echo "lancement du test avec $chiffre \n";
+        $resultat = $word->fizzbuzz($chiffre);
+        $this->assertSame($resultat , $expected);
+        // echo "fin du test avec $chiffre \n";
+    }
+
+    public static function fizzbuzzProvider(){
+        return [
+            "cas 1" => [ 1 , 1 ],
+            "cas 2" => [ 2 , 2 ],
+            "cas 3" => [ 3 , "fizz" ],
+            "cas 4" => [ 4 , 4 ],
+            "cas 5" => [ 5 , "buzz" ],
+            "cas 6" => [ 6 , "fizz" ],
+            "cas 10" => [ 10 , "buzz" ],
+            "cas 15" => [ 15 , "fizzbuzz" ],
+            "cas 30" => [ 30 , "fizzbuzz" ],
+            "cas 71" => [ 71 , 71 ],
+        ];
+    }
+
 }
                        

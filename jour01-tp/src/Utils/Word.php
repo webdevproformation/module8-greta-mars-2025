@@ -21,4 +21,16 @@ class Word {
 
     }
 
+    public function fizzbuzz(int $chiffre) : int|string{
+        echo "lancement du test avec $chiffre \n";
+        if($chiffre % 3 === 0 && $chiffre % 5 === 0){
+            return "fizzbuzz" ;
+        }else if($chiffre % 3 === 0) {
+            return "fizz" ;
+        }else if($chiffre % 5 === 0) {
+            return "buzz" ;
+        }
+        return $chiffre ; 
+    }
+
 }
