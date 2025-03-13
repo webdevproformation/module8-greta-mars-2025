@@ -10,6 +10,6 @@ assertEqual() => même valeur 2 et "2"
 assertEmpty() => "" 0 [] null 
 assertStringContainsString()     => "texte Alain" => est que dans la string il y a le mot Alain
 assertContains()                 => [1,2,3,4]     => est que dans le tableu il y a la valeur 3 
-assertException() => // est ce qu'il y a une exception déclenchée
+expectException() => // est ce qu'il y a une exception déclenchée
 ```
 
