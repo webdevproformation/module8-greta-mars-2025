@@ -1,3 +1,3 @@
 <?php 
 
-phpinfo();
+echo "🚧 le site est en cours de création ...."; 

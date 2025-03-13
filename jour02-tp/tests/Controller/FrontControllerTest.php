@@ -33,26 +33,23 @@ class FrontControllerTest extends WebTestCase{
 
         // remplir le formulaire avec des données valides 
 
-        for($i = 0 ; $i < 2 ; $i++ ){
-            $unique = "Alain" . uniqid();
+        $unique = "Alain" . uniqid();
 
-            $this->client->submitForm("créer un profil client" , [
-                "client[pseudo]" => $unique,
-                "client[email]" => "a@yahoo.fr",
-                "client[password]" => "Azerty1234!"
-            ]);
+        $this->client->submitForm("créer un profil client" , [
+            "client[pseudo]" => $unique,
+            "client[email]" => "a@yahoo.fr",
+            "client[password]" => "Azerty1234!"
+        ]);
 
-            // verifique que il y a bien un profil en base de données avec ayant ce profil 
-            $client = $this->clientRepository->findOneBy(["pseudo" => $unique]);
+        // verifique que il y a bien un profil en base de données avec ayant ce profil 
+        $client = $this->clientRepository->findOneBy(["pseudo" => $unique]);
 
-            self::assertNotEmpty($client); // je verifie qu'il y a bien un utilisateur en base de données
-        }
-        
+        self::assertNotEmpty($client); // je verifie qu'il y a bien un utilisateur en base de données
 
         // supprimer ce compte factice 
 
-       /*  $this->manager->remove($client);
-        $this->manager->flush(); */
+        $this->manager->remove($client);
+        $this->manager->flush(); 
     }
 
 
