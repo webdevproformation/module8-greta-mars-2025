@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="robots" content="noindex">
+
+	<script language="JavaScript">
+		var userLang = navigator.language.substring(0, 2) || navigator.userLanguage.substring(0, 2);
+		if(userLang == "es") {
+			document.title = "Bienvenido a su nuevo hosting compartido Magic Online";
+		} else if(userLang == "en") {
+			document.title = "Welcome to your new Magic Online web hosting";
+		} else {
+			document.title = "Bienvenue sur votre nouvel h&#233;bergement web Magic Online";
+		}
+	</script>
+	<style>
+		body, html {
+			width: 100%;
+			height: 100%;
+			margin: 0;
+			padding: 0;
+		}
+		iframe {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			border: 0px;
+		}
+	</style>
+</head>
+
+<body>
+	<iframe title="Magic Online parking page" id="parking" src="https://cdn.webmo.fr/mutu-default-magic.php"></iframe>
+</body>
+</html>
