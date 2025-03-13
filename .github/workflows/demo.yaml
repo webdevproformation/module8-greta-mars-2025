@@ -1,0 +1,17 @@
+name: demo
+
+# on veut que cette action soit déclenchée lorsque l'on fait un push sur le dépôt github
+on:
+    push
+
+# voici les actions que l'on veut faire réaliser par le dépôt github 
+# qui va contenir une machine virtuelle "ubuntu-latest"
+# et on va juste lui faire écrire hello !!!
+jobs:
+    etape1:
+        runs-on: ubuntu-latest
+        steps:
+        -
+            name: Dire Hello
+            run: |
+                echo "hello !!"
