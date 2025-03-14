@@ -9,5 +9,6 @@
 # React 1 seule page + Symfony 1 seul controller avec 1 seule méthode
 
 symfony new jour04-back 
+# la partie twig n'est pas nécessaire Car elle va être gérée par React
 cd jour04-back
 symfony serve 
