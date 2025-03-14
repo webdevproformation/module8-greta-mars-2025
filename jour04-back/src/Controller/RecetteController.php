@@ -21,13 +21,15 @@ class RecetteController extends AbstractController{
                 "id" => 1,
                 "nom" => "crêpe fromage",
                 "prix" => 2,
-                "ingredients" => [ "oeuf", "lait" , "beurre" ]
+                "ingredients" => [ "oeuf", "lait" , "beurre" ],
+                "image" => "https://placehold.co/600x400?text=crêpe+fromage"
             ],
             [
                 "id" => 2,
                 "nom" => "pizza",
                 "prix" => 5,
-                "ingredients" => [ "tomate", "poivron" ]
+                "ingredients" => [ "tomate", "poivron" ],
+                "image" => "https://placehold.co/600x400?text=pizza"
             ]
         ];
         $id = $request->query->get("id", null);
