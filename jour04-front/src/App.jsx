@@ -4,14 +4,14 @@ const App = () => {
   const [recettes, setRecettes]= useState([]);
 
   useEffect(() => {
-    fetch("https://127.0.0.1:8000/")
+    fetch(import.meta.env.VITE_URL_API)
       .then(function(reponse) { 
         return reponse.json()
       })
       .then(function(data) {
         setRecettes(data);
       })
-  }, [])
+  }, []);
 
   return <div className="container">
     <h1>Mes supers recettes</h1>
@@ -22,7 +22,7 @@ const App = () => {
         <p>prix : {recette.prix} €</p>
         <h3>Ingrédients de la recettes :</h3>
         <ul>
-          {recette.ingredients.map( (ingredient, key)  => {
+          {recette.ingredients.map( (ingredient, key )  => {
             return <li key={key}>{ingredient}</li>
           })}
         </ul>
