@@ -38,7 +38,9 @@ class RecetteController extends AbstractController{
                 return $recette["id"] == $id; 
             });
         }
-        return new JsonResponse($recettes); 
+        return new JsonResponse($recettes , 200 , [
+            'Access-Control-Allow-Origin'=> '*'
+        ]); 
     }
 
 
